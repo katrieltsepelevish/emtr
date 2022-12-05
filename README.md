@@ -14,7 +14,7 @@ yarn add @katrieltsepelevish/emtr
 
 ```js
 
-import Emtr from '@ktrl/emtr';
+import Emtr from '@katrieltsepelevish/emtr';
 
 const emitter = new Emtr();
 
@@ -35,8 +35,7 @@ emitter.clear();
 
 Make sure to bump the version before publishing
 
-**npm:**
-
 ```bash
+yarn build
 npm publish --access=public
 ```
