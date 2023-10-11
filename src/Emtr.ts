@@ -14,10 +14,7 @@ class Emtr {
   fire(event: string, ...args: any) {
     const eventHandlers = this.handlers[event] || [];
 
-    if (!eventHandlers.length) {
-      console.error(`Fire failed, Event ${event} do not have handlers.`);
-      return;
-    }
+    if (!eventHandlers.length) return;
 
     eventHandlers.forEach((cb) => cb(...args));
 
