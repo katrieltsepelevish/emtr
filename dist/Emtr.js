@@ -19,6 +19,16 @@ class Emtr {
         eventHandlers.forEach((cb) => cb(...args));
         return;
     }
+    // Fires the event and invokes the event's registered handlers asynchronously.
+    async fireAsync(event, ...args) {
+        const eventHandlers = this.handlers[event] || [];
+        if (!eventHandlers.length)
+            return;
+        // Use Promise.all to asynchronously invoke handlers
+        await Promise.all(eventHandlers.map(async (cb) => {
+            await cb(...args);
+        }));
+    }
     // Removes already regitered event to prevent invoke
     remove(event, callback) {
         const eventHandlers = this.handlers[event] || [];
