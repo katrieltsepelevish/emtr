@@ -1,6 +1,6 @@
 {
   "name": "@katrieltsepelevish/emtr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "lightweight event emitter",
   "main": "dist/index.js",
   "author": "Katriel Tsepelevish <katriel.tsepelevish@gmail.com>",
